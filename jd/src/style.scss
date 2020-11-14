@@ -1,0 +1,350 @@
+$color-red: #e82331;
+$color-sub-red: #e9515b;
+$color-pink: #f7868e;
+$color-grey: #888;
+$color-light-grey: #f9fafa;
+$color-dark: #444;
+$font-size-content: 16px;
+
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper {
+    margin-top: 70px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+// component
+
+
+
+@mixin btn_color($border, $background, $font) {
+    color: $font;
+    background-color: $background;
+    border-color: $border;
+}
+
+.description {
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    font-size: $font-size-content;
+
+    p {
+        margin-bottom: 20px;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    
+    h2 {
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        text-transform: capitalize;
+    }
+    
+    h3 {
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    ul,
+    ol {
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    a:not(.btn) {
+        color: $color-red;
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    padding: 8px 10px;
+    border: 2px solid #888;
+    border-radius: 4px;
+    display: block;
+    text-transform: capitalize;
+    text-align: center;
+    transition: .2s;
+    line-height: 1;
+
+
+    &--solid {
+        color: #fff;
+        background-color: $color-sub-red;
+        border-color: $color-sub-red;
+    }
+
+    &--l {
+        padding: 15px 20px;
+        font-size: 1.25rem;
+    }
+
+    &--solid-grey {
+        color: white;
+        background-color: $color-grey;
+        border-color: $color-grey;
+    }
+
+    &--inline {
+        display: inline-block;
+    }
+
+    &:hover {
+        background-color: $color-pink;
+        border-color: $color-pink;
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 912px) {
+    .mobile-hide {
+        display: none !important; 
+    }
+}
+
+
+// 
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (max-width: 986px) {
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        height: 40px;
+        display: flex;
+
+        &>img {
+            height: 100%;
+        }
+
+        &>div {
+            color: $color-red;
+            line-height: 40px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+
+    &__menu {
+        height: 40px;
+        align-items: center;
+        display: flex;
+        color: $color-grey;
+
+        >* {
+            display: block;
+        }
+
+        >*+* {
+            margin-left: 10px;
+        }
+    }
+}
+
+.footer {
+    padding: 30px 20px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    text-transform: Capitalize;
+    white-space: pre;
+    a {
+        text-decoration: underline;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(to right, #12121294, #12121294), url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+
+
+    &__title {
+        font-size: 72px;
+        margin-bottom: 20px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        font-size: 20px;
+        font-weight: 300;
+        .space {
+            margin-left: 15px;
+        }
+    }
+}
+
+.main {
+    padding-top: 40px;
+    padding: 30px;
+    &__navigator {
+        color: $color-grey;
+        font-size: $font-size-content;
+        font-weight: 500;
+        margin-bottom: 30px;
+
+        & a {
+            color: $color-red;
+
+            &:nth-last-of-type(1) {
+                color: $color-grey;
+            }
+        }
+
+        & i {
+            font-size: 0.7em;
+            vertical-align: middle;
+        }
+    }
+
+    
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "desc sidebar";
+
+    @media (max-width: 912px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "desc"
+            "sidebar";
+    }
+
+    & .description {
+        grid-area: desc;
+        padding-right: 50px;
+        padding-bottom: 50px;
+       
+    }
+
+    & .sidebar {
+        grid-area: sidebar;
+    
+        & > * {
+            margin-bottom: 14px;
+        }
+    
+        i {
+            margin-right: 5px;
+        }
+    
+        hr {
+            border: 0.5px solid $color-grey;
+        }
+    
+        .icons {
+            text-align: center;
+            color: $color-dark;
+        }
+    }
+}
+
+
+
+
+
+
+// form
+.form {
+    border-radius: 4px;
+    padding: 40px;
+    background-color: $color-light-grey;
+
+    .group {
+        margin-bottom: 25px;
+    }
+
+    .require::after {
+        content: '*';
+        margin-left: 3px;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 10px;
+        // border: 1px solid $color-grey;
+        outline: 0.5px solid #777;
+        &.input--wide {
+            width: 100%;
+        }
+    }
+
+}
+

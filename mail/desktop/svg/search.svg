@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="487px" height="487px" viewBox="0 0 487 487" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Untitled</title>
+    <defs>
+        <path d="M473.418,449.285 L303.28,279.148 C363.039,206.061 352.234,98.369 279.148,38.61 C206.062,-21.149 98.369,-10.344 38.61,62.742 C-21.149,135.828 -10.344,243.521 62.742,303.28 C125.695,354.753 216.195,354.753 279.148,303.28 L449.286,473.418 C456.066,479.966 466.87,479.778 473.418,472.998 C479.805,466.384 479.805,455.899 473.418,449.285 Z M171.218,307.751 C95.848,307.666 34.769,246.588 34.685,171.218 C34.685,95.813 95.813,34.685 171.218,34.685 C246.623,34.685 307.751,95.813 307.751,171.218 C307.751,246.623 246.623,307.751 171.218,307.751 Z" id="path-1"></path>
+        <filter x="-1.5%" y="-1.0%" width="102.9%" height="102.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search" transform="translate(4.000000, 2.000000)" fill-rule="nonzero">
+            <g id="Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#B0B3B8" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
