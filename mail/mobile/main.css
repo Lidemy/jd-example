@@ -170,7 +170,7 @@ h3, h4, p {
 
 .moblist_mail_content p {
   width: 600px;
-  font-size: 10px;
+  font-size: 12px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -407,7 +407,7 @@ h3, h4, p {
 
 .mobpage_mail_title_left span {
   height: 20px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   background: #9e9e9e57;
   padding: 0 0.8em;
