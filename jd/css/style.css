@@ -167,7 +167,6 @@ body {
   color: #fff;
   text-align: center;
   text-transform: Capitalize;
-  white-space: pre;
 }
 .footer a {
   text-decoration: underline;
@@ -233,7 +232,6 @@ body {
 }
 .content .description {
   grid-area: desc;
-  padding-right: 50px;
   padding-bottom: 50px;
 }
 .content .sidebar {
